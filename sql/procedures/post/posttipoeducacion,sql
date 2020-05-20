@@ -1,0 +1,19 @@
+DELIMITER //
+
+DROP IF EXISTS POSTTIPOEDUCACION;
+
+CREATE PROCEDURE POSTTIPOEDUCACION(
+    pnombre VARCHAR(256)
+    ,OUT out_id INT)
+BEGIN
+    INSERT INTO TipoEducacion (
+        nombre
+    ) VALUES (
+        pnombre
+    );
+
+    SELECT **id** as **out_id**
+    FROM **TipoEducacion** LAST_INSERT_ID();
+END; //
+
+DELIMITER ;

@@ -1,0 +1,16 @@
+DELIMITER //
+
+DROP PROCEDURE IF EXISTS PUTTIPOEDUCACION;
+
+CREATE PROCEDURE PUTTIPOEDUCACION(
+     pid INT
+    ,pnombre VARCHAR(256)
+)
+BEGIN
+    UPDATE TipoEducacion SET
+         nombre = ifnull(pnombre, nombre)
+    WHERE ID = PID;
+
+END; //
+
+DELIMITER ;

@@ -1,0 +1,8 @@
+bin/
+include/
+lib/
+test/
+__pycache__/
+*.pyc 
+log/*.log
+venv/

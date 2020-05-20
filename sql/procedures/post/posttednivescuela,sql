@@ -1,0 +1,22 @@
+DELIMITER //
+
+DROP IF EXISTS POSTTEDNIVESCUELA;
+
+CREATE PROCEDURE POSTTEDNIVESCUELA(
+    pidEscuela INT
+    ,pidTipoNivel INT
+    ,OUT out_id INT)
+BEGIN
+    INSERT INTO TedNivEscuela (
+        idEscuela
+        ,idTipoNivel
+    ) VALUES (
+        pidEscuela
+        ,pidTipoNivel
+    );
+
+    SELECT **id** as **out_id**
+    FROM **TedNivEscuela** LAST_INSERT_ID();
+END; //
+
+DELIMITER ;

@@ -1,0 +1,13 @@
+LOGLEVEL:INFO
+LOGDIR:log
+CLIENTE:TUSI UTN 2020
+TEMA:Dark
+LOGFMT:%(asctime)s %(message)s
+LOGDATEFMT:%Y/%m/%d-%I%M%S-%p
+DBhost:localhost
+DBuser:tusi2
+DBpassword:tusi2-2020
+DBdb:tusi2
+DBcharset:utf8
+DBuse_unicode:True 
+intentos_de_conexion:5

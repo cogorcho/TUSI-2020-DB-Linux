@@ -1,0 +1,18 @@
+DELIMITER //
+
+DROP IF EXISTS PUTTIPONIVELEDUCACION;
+
+CREATE PROCEDURE PUTTIPONIVELEDUCACION(
+    pid INT
+    ,pidTipoEducacion INT
+    ,pidNivelEducacion INT
+)
+BEGIN
+    UPDATE TipoNivelEducacion SET
+         idTipoEducacion = ifnull(pidTipoEducacion, idTipoEducacion)
+        ,idNivelEducacion = ifnull(pidNivelEducacion, idNivelEducacion)
+    WHERE ID = pID;
+
+END; //
+
+DELIMITER ;

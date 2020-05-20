@@ -1,0 +1,19 @@
+DELIMITER //
+
+DROP IF EXISTS POSTPROVINCIA;
+
+CREATE PROCEDURE POSTPROVINCIA(
+    pnombre VARCHAR(128)
+    ,OUT out_id INT)
+BEGIN
+    INSERT INTO Provincia (
+        nombre
+    ) VALUES (
+        pnombre
+    );
+
+    SELECT **id** as **out_id**
+    FROM **Provincia** LAST_INSERT_ID();
+END; //
+
+DELIMITER ;

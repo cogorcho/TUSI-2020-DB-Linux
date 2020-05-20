@@ -1,0 +1,19 @@
+DELIMITER //
+
+DROP IF EXISTS POSTAMBITO;
+
+CREATE PROCEDURE POSTAMBITO(
+    pnombre VARCHAR(256)
+    ,OUT out_id INT)
+BEGIN
+    INSERT INTO Ambito (
+        nombre
+    ) VALUES (
+        pnombre
+    );
+
+    SELECT **id** as **out_id**
+    FROM **Ambito** LAST_INSERT_ID();
+END; //
+
+DELIMITER ;

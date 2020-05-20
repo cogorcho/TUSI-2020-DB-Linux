@@ -1,0 +1,19 @@
+DELIMITER //
+
+DROP IF EXISTS POSTNIVELEDUCACION;
+
+CREATE PROCEDURE POSTNIVELEDUCACION(
+    pnombre VARCHAR(256)
+    ,OUT out_id INT)
+BEGIN
+    INSERT INTO NivelEducacion (
+        nombre
+    ) VALUES (
+        pnombre
+    );
+
+    SELECT **id** as **out_id**
+    FROM **NivelEducacion** LAST_INSERT_ID();
+END; //
+
+DELIMITER ;
