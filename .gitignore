@@ -3,6 +3,7 @@ include/
 lib/
 test/
 __pycache__/
-*.pyc 
-log/*.log
+*.pyc
+log/*
+!/log/.gitkeep
 venv/
