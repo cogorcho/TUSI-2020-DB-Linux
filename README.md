@@ -10,6 +10,7 @@ Sistemas Informaticos (TUSI) de la Regional San Nicolas de la UTN.
 
 # Script de creacion: createdb.sh
 
+```sh
 #!/bin/bash
 #-------------------------------------#
 #
@@ -153,3 +154,4 @@ EOF7
 TIEMPO=`date +"%Y-%m-%d-%H:%M:%S"`
 echo "Listo: ${TIEMPO}"
 
+```
